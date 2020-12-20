@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My BlogPost</title>
+  </head>
+  <body>
+    <!-- Hero Section  -->
+    <section id="hero">
+      <div class="hero container">
+        <div>
+          <h1>PROCESSOR in <span></span></h1>
+          <h1>Verilog V/S <span></span></h1>
+          <h1>TL-Verilog<span></span></h1>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero Section  -->
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="about container">
+        <div class="col-left">
+          <div class="about-img">
+            <img src="./img/img-2.jpeg" alt="img" />
+          </div>
+        </div>
+        <div class="col-right">
+          <h1 class="section-title">What is a processor?</h1>
+          <p>A processor is an integrated electronic circuit that performs the
+            calculations that run a computer. A processor performs arithmetical,
+            logical, input/output (I/O) and other basic instructions that are
+            passed from an operating system (OS). Most other processes are
+            dependent on the operations of a processor. 
+          </p>
+          <h1 style ="font-size: 3rem; padding-top: 3rem; padding-bottom: 3rem;;" class="section-title">HOW PROCESSOR WORKS ?</h1>
+          <p>           
+            <b style=" font-size: 1.8rem;"><u>Different stages of a processor:
+            <ol style="font-size: 1.7rem; margin-top: 2rem; line-height: 3rem;"></u></b>
+              <li>Extract the instruction from
+              memory.</li>
+              <li>Decode the instruction to find out the operation to be
+              performed, i.e. Addition, Subtraction, etc.</li>
+              <li> Perform that
+              instruction in the execute state.</li>
+              <li>Update the registers
+              (flipflops) if there is some further instruction using that
+              register.</li>
+              <li>Write back to memory.</li>
+            </ol>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- End Service Section -->
+
+    <!-- Projects Section -->
+    <section id="projects">
+      <div class="projects container">
+        <div class="all-projects">
+          <div class="project-item">
+            <div class="project-info">
+              <h2>INSTRUCTION FETCH(IF):</h2>
+              <p>
+                To load instruction or some piece of data from memory into a CPU register, all instructions must be fetched before they can be executed. The time it takes to fetch instruction is known as the fetch time or a fetch cycle and is measured in clock ticks.<br>
+                PC is the program counter, from where the address of that location is fed to an instruction memory, and we get that instruction in the instruction register. PC is incremented by 1 to get the next location instruction. 
+              </p>
+            </div>
+            <div class="project-img">
+              <img src="./img/fetch.jpeg" alt="img" />
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-info">
+            <h2>INSTRUCTION DECODE(ID):</h2>
+            <p>
+             The decoding process allows the CPU to determine what instruction is to be performed so that the CPU can tell how many operands it needs to fetch from instruction memory in order to perform the instruction. The opcode fetched from the memory is decoded for the next steps and moved to the appropriate registers.
+             Now, instruction is divided into different components depending on ISA, and reading register (source register) and writing register (destination register) are given. 
+            </p>
+            </div>
+            <div class="project-img">
+              <img src="./img/decode.jpeg" alt="img" />
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-info">
+              <h2>EXECUTE(EXE):</h2>
+              <p>
+                The execution stage does all the computing part where ALU does every computation.
+                It also has a flag which will decide whether a branch (means if there is the if-else statement, then we need to jump to a particular address) is taken or not and in the next stage, returns it back to PC so that it can perform PC+imm(immediate value) instead of PC+1.
+              </p>
+            </div>
+            <div class="project-img">
+              <img src="./img/execute.jpg" alt="img" />
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-info">
+            <h2>MEMORY(MEM):</h2>
+            <p>
+              It stores the data that is being computed from 	the Execution stage into the memory at a 	particular address .
+            	Eg. SW R3 , 0(10)  ->
+		        	Store register 3 data in location 10 on data memory . 
+            </p>
+            </div>
+            <div class="project-img">
+              <img src="./img/memory.jpeg" alt="img" />
+            </div>
+          </div>
+          <div class="project-item">
+            <div class="project-info">
+              <h2>WRITEBACK(WB):</h2>
+              <p>
+                It updates the destination register in which we want to store the computed data . 
+                Eg. R3 = R1 + R2  ->
+                register R1 and R2 data are added and then stored in R3.<br><br>
+            </p>
+            </div>
+            <div class="project-img">
+              <img src="./img/writeback.png" alt="img" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Projects Section -->
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="about container">
+        <div class="col-left">
+          <div class="about-img">
+            <img src="./img/learn.jpeg" alt="img" />
+          </div>
+        </div>
+        <div class="col-right">
+          <h1 class="section-title">How I learnt processor design?</h1>
+          <p>Now to write all these stages we have HDL’s which support writing the hardware languages. 
+          In this lockdown, I figured out my interest in processor design and current technology and how we are able to work on a laptop. What interested me more is how from the advent of time, we became 100x faster as compared to the 1980s.    
+          Then I learned processor design, what are the current technology, and what are the current fallacies and pitfalls. 
+          Then I learned Verilog as the starting language to design hardware. We can even design a processor in python and c++ but the hectic part is to convert no to binary to hexadecimal or decimal to binary or vice versa. Also, these languages don't support the clock feature which is the basic element in hardware. We are just hardcoding our work in these languages and cannot see the IPC (Instruction per cycle) count. 
+          Now coming to other HDL languages like MyHDL, VHDL, Verilog, pYMTL, system Verilog, etc. I learned Verilog for eight months and after two-three months I created a basic processor. Then I moved on to the next stage to create a 5-stage pipeline processor also assuming data hazards. It took me 1 month to create a processor and even now I was not able to create an instruction memory and data memory. At that time I figured out one of the limitations in Verilog i.e. We cannot pass a 2-d array in a module instantiation. So in figuring out how to solve this issue, I came to a tool named Xilinx vivado in which there is an IP generator from which we can create a block memory whether it is readable only (ROM) or readable and writable both (RAM).
+          One difficulty in writing a pipeline processor is that we need to create 5 different modules for different stages.  And then combine them in the top module. It was really hectic to instantiate those modules correctly and give control to all those signals correctly. 
+          It took me a total of 2 months to create a core properly. 
+          Now let's just check out the most trending TL-Verilog. I came to know this via VSDOpen 2020 in which I participated and get to know TL-Verilog and creator Steeve Hoover. 
+          </p>
+        </div>
+      </div>
+    </section>
+<hr>
+<br>
+<div class=image>
+  <img style="object-fit: cover; width: 90%;margin: 10rem;" src="./img/image.png"/>
+</div>
+    <section id="about">
+      <div class="about container">
+        <div class="col-left">
+          <div class="about-img">
+            <p>Want to know some cool fact?
+              <a href="https://riscv.org/blog/2020/11/13-year-old-nicholas-sharkey-creates-a-risc-v-core/"><br>Check this out</a>
+              <p>A 13yr- old kid creates a core. Sounds cool, isn't it?</p>
+            </p>
+          </div>
+        </div>
+          <div class="col-right">
+            <p> 
+              <p>I came to know more about TL-verilog in RISCV – MYTH (microprocessor in thirty hours) i.e. 5 days. We can create a core in just 5 days with help of TL-verilog and MAKERCHIP IDE .</p> 
+              <b style="font-size: 2rem;;">ADVANTAGES:</b>
+              <ol>
+                <li>Proper guided tutorials in makerchip ide to create something.
+                </li>
+                <li>No need to create different modules for a pipelined processor.</li>
+                <li>Proper visualization of core seen as a diagram.</li>
+                <li>Proper debugging by seeing the waveform.</li>
+                <li>No need to create memory as makerchip ide platform uses M4 preprocessor through which we can easily test the program in our processor.</li>
+                <li>No need to create a testbench to run your program . In verilog we need to create testbench to test our inputs but in makerchip we can still get some understandable result as it gives inputs random value.</li>
+              </ol>
+              <p>Want to know more about this tech? <a href="https://myth2.makerchip.com/sandbox/0yPfNhQVR/048hBkE">Click here</a>
+              </p>
+              <br>
+              <p>Check out this latest talk about TL-verilog and makerchip: <a href="https://www.youtube.com/watch?app=desktop&v=_FFmJZPz6aM&feature=youtu.be&ab_channel=VLSIEXPERT">Click here</a>
+              </p> 
+            </p>
+          </div>
+    </section>
+    <div class="boxes">
+        <div class="box">
+          <img src="./img/8.jpeg"/>
+        </div>
+        <div class="box">
+          <img src="./img/3.jpeg"/>
+        </div>
+        <div class="box">
+          <img src="./img/10.jpeg"/>
+        </div>
+        </div>
+      </div>
+    <hr>
+
+    <section id="about">
+      <div class="about container">
+        <div class="col-left">
+          <div class="about-img">
+            <img src="./img/2.jpeg" alt="img" />
+          </div>
+        </div>
+        <div class="col-right">
+          <p style="font-weight: bold;">In verilog it took appx 1000 lines to design the whole code whether in TL-V 110 lines . A 10x better solution ... WOAAHHHHHHHHHHH....... 
+            Now lets just talk a little bit about TL-V. </p>
+            <br><br>
+          <p>Enter Transaction-Level Verilog (TL-Verilog). Though it is an evolution of SystemVerilog, the sequential Verilog constructs (as well as many other constructs) become legacy features for backward compatibility. In place of a software abstraction, you get abstractions that match the mental models designers use to reason about their microarchitectures: pipelines, state, validity, hierarchy, and transactions. Leave loops, structs, and objects to software. And lest you think the introduction of abstract context adds bloat to the code, TL-Verilog models are generally half the size of their Verilog counterparts, with all the same detail. High-level context actually simplifies the logic expression. And, what does it buy you besides less typing? How about fewer bugs, better code organization, smoother hand-off, top-down design, easier microarchitectural changes, safe re-pipelining, and easier leverage and reuse. The mechanisms of TL-Verilog would be impractical in the face of sequential semantics.
+            <br>
+          The point is, using software, with sequential semantics, as a foundation for hardware modeling has led us down a limiting path, and TL-Verilog makes this point evident. TL-Verilog is specifically designed for modeling hardware -- more-so than any other language. Without the baggage of a software foundation, it is able to provide abstract context suited to hardware design with numerous benefits.
+          Want to know more about TL-VERILOG:
+          <a href="https://arxiv.org/pdf/1811.01780.pdf">Ckeck it out</a>
+          </p>
+           <p style="font-weight: bold; text-align: center;">Its really a game changer! Now you need to focus more on logic and thinking stuff rather than doing something that is already done.
+            <br>
+            THINK HARD, WORK SMART!!</p>
+        </div>
+      </div>
+    </section>
+    
+  </body>
+</html>
