@@ -139,10 +139,10 @@
           <h1 class="section-title">How I learnt processor design?</h1>
           <p>Now to write all these stages we have HDL’s which support writing the hardware languages. 
           In this lockdown, I figured out my interest in processor design and current technology and how we are able to work on a laptop. What interested me more is how from the advent of time, we became 100x faster as compared to the 1980s.    
-          Then I learned processor design, what are the current technology, and what are the current fallacies and pitfalls. 
-          Then I learned Verilog as the starting language to design hardware. We can even design a processor in python and c++ but the hectic part is to convert no to binary to hexadecimal or decimal to binary or vice versa. Also, these languages don't support the clock feature which is the basic element in hardware. We are just hardcoding our work in these languages and cannot see the IPC (Instruction per cycle) count. 
+          <br><br>Then I learned processor design, what are the current technology, and what are the current fallacies and pitfalls. 
+          <br><br>Then I learned Verilog as the starting language to design hardware. We can even design a processor in python and c++ but the hectic part is to convert no to binary to hexadecimal or decimal to binary or vice versa. Also, these languages don't support the clock feature which is the basic element in hardware. We are just hardcoding our work in these languages and cannot see the IPC (Instruction per cycle) count. 
           Now coming to other HDL languages like MyHDL, VHDL, Verilog, pYMTL, system Verilog, etc. I learned Verilog for eight months and after two-three months I created a basic processor. Then I moved on to the next stage to create a 5-stage pipeline processor also assuming data hazards. It took me 1 month to create a processor and even now I was not able to create an instruction memory and data memory. At that time I figured out one of the limitations in Verilog i.e. We cannot pass a 2-d array in a module instantiation. So in figuring out how to solve this issue, I came to a tool named Xilinx vivado in which there is an IP generator from which we can create a block memory whether it is readable only (ROM) or readable and writable both (RAM).
-          One difficulty in writing a pipeline processor is that we need to create 5 different modules for different stages.  And then combine them in the top module. It was really hectic to instantiate those modules correctly and give control to all those signals correctly. 
+          <br><br>One difficulty in writing a pipeline processor is that we need to create 5 different modules for different stages.  And then combine them in the top module. It was really hectic to instantiate those modules correctly and give control to all those signals correctly. 
           It took me a total of 2 months to create a core properly. 
           Now let's just check out the most trending TL-Verilog. I came to know this via VSDOpen 2020 in which I participated and get to know TL-Verilog and creator Steeve Hoover. 
           </p>
@@ -177,9 +177,10 @@
                 <li>No need to create memory as makerchip ide platform uses M4 preprocessor through which we can easily test the program in our processor.</li>
                 <li>No need to create a testbench to run your program . In verilog we need to create testbench to test our inputs but in makerchip we can still get some understandable result as it gives inputs random value.</li>
               </ol>
+		  <br>
               <p>Want to know more about this tech? <a href="https://myth2.makerchip.com/sandbox/0yPfNhQVR/048hBkE" target="__blank">Click here</a>
               </p>
-              <br>
+            
               <p>Check out this latest talk about TL-verilog and makerchip: <a href="https://www.youtube.com/watch?app=desktop&v=_FFmJZPz6aM&feature=youtu.be&ab_channel=VLSIEXPERT" target="__blank">Click here</a>
               </p> 
             </p>
